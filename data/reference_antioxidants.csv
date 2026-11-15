@@ -1,0 +1,94 @@
+ID,name,PubChem CID,canonical SMILES,Natural/Synthetic
+AO-001,"2,6-Di-tert-butyl-4-methylphenol",31404,Cc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,Synthetic
+AO-002,"2,6-Di-tert-butylphenol",31405,CC(C)(C)c1cccc(C(C)(C)C)c1O,Synthetic
+AO-003,"2,2'-Methylenebis(4-methyl-6-tert-butylphenol)",8398,Cc1cc(Cc2cc(C)cc(C(C)(C)C)c2O)c(O)c(C(C)(C)C)c1,Synthetic
+AO-004,Tert-Butylhydroquinone,16043,CC(C)(C)c1cc(O)ccc1O,Synthetic
+AO-005,6-tert-Butyl-m-cresol,6937,Cc1ccc(C(C)(C)C)c(O)c1,Synthetic
+AO-006,2-Tert-Butylphenol,6923,CC(C)(C)c1ccccc1O,Synthetic
+AO-007,Phenol,996,Oc1ccccc1,Synthetic
+AO-008,Antioxidant 1010,64819,CC(C)(C)c1cc(CCC(=O)OCC(COC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)(COC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)COC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,Synthetic
+AO-009,Octadecyl DI-tert-butyl-4-hydroxyhydrocinnamate,16386,CCCCCCCCCCCCCCCCCCOC(=O)CCc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,Synthetic
+AO-010,Antioxidant 245,91620,Cc1cc(CCC(=O)OCCOCCOCCOC(=O)CCc2cc(C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,Synthetic
+AO-011,"4,4'-Methylenebis(2,6-di-tert-butylphenol)",8372,CC(C)(C)c1cc(Cc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,Synthetic
+AO-012,Butylated Hydroxyanisole,8456,COc1ccc(O)c(C(C)(C)C)c1,Synthetic
+AO-013,"2,6-Di-tert-butyl-4-methoxyphenol",10269,COc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,Synthetic
+AO-014,2-tert-Butyl-4-hydroxyanisole,6932,COc1ccc(O)cc1C(C)(C)C,Synthetic
+AO-015,"2,2'-Methylenebis(6-cyclohexyl-p-cresol)",77681,Cc1cc(Cc2cc(C)cc(C3CCCCC3)c2O)c(O)c(C2CCCCC2)c1,Synthetic
+AO-016,"2,5-Di-tert-butylhydroquinone",2374,CC(C)(C)c1cc(O)c(C(C)(C)C)cc1O,Synthetic
+AO-017,"2,4-Dimethyl-6-tert-butylphenol",15884,Cc1cc(C)c(O)c(C(C)(C)C)c1,Synthetic
+AO-018,"3,5-Di-tert-butyl-4-hydroxybenzoic acid",15007,CC(C)(C)c1cc(C(=O)O)cc(C(C)(C)C)c1O,Synthetic
+AO-019,"3-tert-Butyl-4,5-dihydroxyanisole",133433,COc1cc(O)c(O)c(C(C)(C)C)c1,Synthetic
+AO-020,Hydroquinone,785,Oc1ccc(O)cc1,Synthetic
+AO-021,"Phenol, 2-(1,1-dimethylethyl)-5-pentadecyl-",122598,CCCCCCCCCCCCCCCc1ccc(C(C)(C)C)c(O)c1,Synthetic
+AO-022,"3,5-DI-Tert-butyl-4-hydroxybenzylamine",601078,CC(C)(C)c1cc(CN)cc(C(C)(C)C)c1O,Synthetic
+AO-023,Dibutylphenol,3015343,CCCCc1cccc(O)c1CCCC,Synthetic
+AO-024,Catechol,289,Oc1ccccc1O,Natural
+AO-025,"4,4'-Methylenebis(2-methylphenol)",11160528,Cc1cc(Cc2ccc(O)c(C)c2)ccc1O,Synthetic
+AO-026,"3-(1,1-Dimethylethyl)-5-methyl-1,2-benzenediol",66095,Cc1cc(O)c(O)c(C(C)(C)C)c1,Synthetic
+AO-027,Pyrogallol,1057,Oc1cccc(O)c1O,Natural
+AO-028,Eugenol,3314,C=CCc1ccc(O)c(OC)c1,Natural
+AO-029,1-Naphthol,7005,Oc1cccc2ccccc12,Synthetic
+AO-030,"2,6-Dimethylphenol",11335,Cc1cccc(C)c1O,Synthetic
+AO-031,P-Cresol,2879,Cc1ccc(O)cc1,Synthetic
+AO-032,"2',4',5'-Trihydroxybutyrophenone",15008,CCCC(=O)c1cc(O)c(O)cc1O,Synthetic
+AO-033,Butylated hydroxymethylphenol,6929,CC(C)(C)c1cc(CO)cc(C(C)(C)C)c1O,Synthetic
+AO-034,Phloroglucinol,359,Oc1cc(O)cc(O)c1,Natural/Synthetic
+AO-035,"Tris(3,5-di-tert-butyl-4-hydroxybenzyl) isocyanurate",93115,CC(C)(C)c1cc(Cn2c(=O)n(Cc3cc(C(C)(C)C)c(O)c(C(C)(C)C)c3)c(=O)n(Cc3cc(C(C)(C)C)c(O)c(C(C)(C)C)c3)c2=O)cc(C(C)(C)C)c1O,Synthetic
+AO-036,"2,2'-Oxamidobis(ethyl 3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate)",93405,CC(C)(C)c1cc(CCC(=O)OCCNC(=O)C(=O)NCCOC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,Synthetic
+AO-037,"N,N'-Hexamethylenebis(3,5-di-tert-butyl-4-hydroxyhydrocinnamamide)",90004,CC(C)(C)c1cc(CCC(=O)NCCCCCCNC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,Synthetic
+AO-038,"2,2'-((2-Hydroxy-5-methyl-m-phenylene)bis(hexahydro-4,7-methanoindanylene))bis(6-tert-butyl-p-cresol)",56842404,Cc1cc(C(C)(C)C)c(O)c(C2(c3cc(C)cc(C4(c5cc(C)cc(C(C)(C)C)c5O)CCC5C6CCC(C6)C54)c3O)CCC3C4CCC(C4)C32)c1,Synthetic
+AO-039,"Di-(3,5-di-tert-butyl-4-hydroxybenzyl)ether",81340,CC(C)(C)c1cc(COCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,Synthetic
+AO-040,"3,5-Di-tert-butylcatechol",66099,CC(C)(C)c1cc(O)c(O)c(C(C)(C)C)c1,Synthetic
+AO-041,tert-Butylcatechol,77643,CC(C)(C)c1cccc(O)c1O,Synthetic
+AO-042,"2,4,6-Tri-tert-butylphenol",12902,CC(C)(C)c1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,Synthetic
+AO-043,Trimethylhydroquinone,12785,Cc1cc(O)c(C)c(C)c1O,Synthetic
+AO-044,Allylpyrocatechol,292101,C=CCc1cccc(O)c1O,Synthetic (tentative)
+AO-045,Resorcinol,5054,Oc1cccc(O)c1,Synthetic
+AO-046,2-Allylphenol,15624,C=CCc1ccccc1O,Synthetic (tentative)
+AO-047,2-Dodecylphenol,171144,CCCCCCCCCCCCc1ccccc1O,Synthetic
+AO-048,"3,5-Di-tert-butyl-4-hydroxybenzaldehyde",73219,CC(C)(C)c1cc(C=O)cc(C(C)(C)C)c1O,Synthetic
+AO-049,5-Tert-amylsalicylic acid,268742,CCC(C)(C)c1ccc(O)c(C(=O)O)c1,Synthetic
+AO-050,"2,2'-Methylenebis(4-ethyl-6-tert-butylphenol)",6928,CCc1cc(Cc2cc(CC)cc(C(C)(C)C)c2O)c(O)c(C(C)(C)C)c1,Synthetic
+AO-051,"2,6-Di-tert-butylhydroquinone",75550,CC(C)(C)c1cc(O)cc(C(C)(C)C)c1O,Synthetic
+AO-052,"2,6-Di-t-butyl-4-dimethylaminophenol",619361,CN(C)c1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,Synthetic
+AO-053,Allylhydroquinone,348577,C=CCc1cc(O)ccc1O,Synthetic (tentative)
+AO-054,4-Methoxyphenol,9015,COc1ccc(O)cc1,Synthetic
+AO-055,Bis(4-hydroxyphenyl)methane,12111,Oc1ccc(Cc2ccc(O)cc2)cc1,Synthetic
+AO-056,"2,4,6-Trimethylphenol",10698,Cc1cc(C)c(O)c(C)c1,Synthetic
+AO-057,"3,4-Dimethyl-6-ethylphenol",247477,CCc1cc(C)c(C)cc1O,Natural
+AO-058,Guaiacol,460,COc1ccccc1O,Natural
+AO-059,DL-alpha-Tocopherol,2116,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C)O2,Natural
+AO-060,Vitamin E,14985,Cc1c(C)c2c(c(C)c1O)CC[C@@](C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)O2,Natural
+AO-061,Tocopherols,14986,Cc1c(O)cc2c(c1C)OC(C)(CCCC(C)CCCC(C)CCCC(C)C)CC2,Natural
+AO-062,(+)-gamma-Tocopherol,92729,Cc1c(O)cc2c(c1C)O[C@](C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)CC2,Natural
+AO-063,Delta-Tocopherol,92094,Cc1cc(O)cc2c1O[C@](C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)CC2,Natural
+AO-064,Beta-Tocopherol,6857447,Cc1cc(O)c(C)c2c1O[C@](C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)CC2,Natural
+AO-065,Propyl Gallate,4947,CCCOC(=O)c1cc(O)c(O)c(O)c1,Synthetic
+AO-066,Caffeic Acid,689043,O=C(O)/C=C/c1ccc(O)c(O)c1,Natural
+AO-067,Ferulic Acid,445858,COc1cc(/C=C/C(=O)O)ccc1O,Natural
+AO-068,Trolox,40634,Cc1c(C)c2c(c(C)c1O)CCC(C)(C(=O)O)O2,Synthetic
+AO-069,Dodecyl Gallate,14425,CCCCCCCCCCCCOC(=O)c1cc(O)c(O)c(O)c1,Synthetic
+AO-070,Octyl Gallate,61253,CCCCCCCCOC(=O)c1cc(O)c(O)c(O)c1,Synthetic
+AO-071,Stearyl gallate,473591,CCCCCCCCCCCCCCCCCCOC(=O)c1cc(O)c(O)c(O)c1,Synthetic
+AO-072,Sesamol,68289,Oc1ccc2c(c1)OCO2,Natural
+AO-073,Methyl Gallate,7428,COC(=O)c1cc(O)c(O)c(O)c1,Natural
+AO-074,Hydrogenated cardanol,68146,CCCCCCCCCCCCCCCc1cccc(O)c1,Synthetic
+AO-075,Tocotrienol,9929901,CC(C)=CCC/C(C)=C/CC/C(C)=C/CCC1(C)CCc2cc(O)ccc2O1,Natural
+AO-076,Cardanol,11266523,C=CC/C=C\C/C=C\CCCCCCCc1cccc(O)c1,Natural
+AO-077,Nordihydroguaiaretic acid,4534,CC(Cc1ccc(O)c(O)c1)C(C)Cc1ccc(O)c(O)c1,Natural
+AO-078,Gamma-Oryzanol,5282164,COc1cc(/C=C/C(=O)O[C@H]2CC[C@]34C[C@]35CC[C@]3(C)[C@@H]([C@H](C)CCC=C(C)C)CC[C@@]3(C)[C@@H]5CC[C@H]4C2(C)C)ccc1O,Natural
+AO-079,Curcumin,969516,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,Natural
+AO-080,Carvacrol,10364,Cc1ccc(C(C)C)cc1O,Natural
+AO-081,Oryzanol,6450219,COc1cc(/C=C/C(=O)O[C@H]2CC[C@]34C[C@]35CC[C@]3(C)[C@@H](C(C)CCC=C(C)C)CC[C@@]3(C)C5CCC4C2(C)C)ccc1O,Natural
+AO-082,Thymol,6989,Cc1ccc(C(C)C)c(O)c1,Natural
+AO-083,beta-Tocotrienol,5282348,CC(C)=CCC/C(C)=C/CC/C(C)=C/CC[C@]1(C)CCc2c(C)c(O)cc(C)c2O1,Natural
+AO-084,Salicylic Acid,338,O=C(O)c1ccccc1O,Natural
+AO-085,5-tert-Butylsalicylic acid,85281,CC(C)(C)c1ccc(O)c(C(=O)O)c1,Synthetic
+AO-086,"3,5-Di-tert-butylsalicylic acid",88208,CC(C)(C)c1cc(C(=O)O)c(O)c(C(C)(C)C)c1,Synthetic
+AO-087,5-Dodecylsalicylic acid,19782984,CCCCCCCCCCCCc1ccc(O)c(C(=O)O)c1,Synthetic
+AO-088,5-tert-Octylsalicylic acid,3781298,CC(C)(C)CC(C)(C)c1ccc(O)c(C(=O)O)c1,Synthetic
+AO-089,"5,5'-Methylenedisalicylic acid",67145,O=C(O)c1cc(Cc2ccc(O)c(C(=O)O)c2)ccc1O,Synthetic
+AO-090,Gallic Acid,370,O=C(O)c1cc(O)c(O)c(O)c1,Natural
+AO-091,Ethyl gallate,13250,CCOC(=O)c1cc(O)c(O)c(O)c1,Synthetic
+AO-092,Ellagic Acid,5281855,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,Natural
+AO-093,Quercetin,5280343,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,Natural

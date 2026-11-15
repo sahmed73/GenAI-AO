@@ -1,0 +1,128 @@
+# Update the following variables
+# sim_run_time = 1 # static variable
+# Rmax = 1.8                 # static variable
+# sim_number = 1              # dynamic variable
+# Rprob = 0.1               # static variable
+# FF = PCFF-IFF                     # static variable
+# reaction_total_frames = 500 # static variable
+# reaction_temp = 300                 # static variable
+# reaction_tstep = 1.0               # static variable
+# reaction_thermostep = 100     # static variable
+#
+# RESTART / RESUME (see submit.sh):
+#   This input is launched as either a FRESH run or a RESUME of a timed-out run.
+#   submit.sh always passes:  -var resume 0|1  -var rfile <path|none>
+#     resume==0 : fresh start  -> read_data + create velocities
+#     resume==1 : continue     -> read_restart ${rfile}, run "upto" total_steps
+#   Rotating restart files (${myid}.restart.a / .b) are written every
+#   ${restartstep} steps so a SLURM time-limit kill can be resumed.
+
+variable		runtime			equal 1 # ns
+variable		tstep			equal 1.0 # fs
+variable		thermostep		equal 100
+variable		total_frames	equal 500
+variable		total_steps		equal round(${runtime}*1000*1000/${tstep})
+variable		dumpstep		equal floor(v_total_steps/v_total_frames)+(floor(v_total_steps/v_total_frames)==0)
+variable		restartstep		equal 1000   # rotating restart write interval (steps)
+variable		Rmax			equal 1.8
+variable		sim_number      equal 1
+variable        Rprob           equal 0.1
+variable        vseed           equal $(floor(random(99999, 1000000, v_sim_number)))
+variable        myid            string reaction   # unique LAMMPS out filenameID
+variable        ptemp           equal  300        # processing temp K
+variable        nevery          equal  10         # attempt reaction every this many steps
+variable        pseed           equal  94587113   # probability random number seed (positive integer)
+
+variable datafile string equilibrated.data
+variable molecule1 string reactant.lmpmol
+variable molecule2 string product.lmpmol
+variable rxn_map1 string reaction.map
+
+
+#------------Initialization (both fresh and resume)------------
+units           real
+dimension       3
+boundary        p p p
+newton          on
+atom_style      full
+timestep        ${tstep}
+
+
+#------------Read: fresh (read_data) vs resume (read_restart)------------
+# On resume, read_restart restores box, atoms, velocities, and all force-field
+# styles + coefficients, so the fresh-path style/coeff + read_data block is
+# skipped (re-declaring styles before read_restart would conflict).
+if "${resume} == 1" then "jump SELF do_resume"
+
+# ---- FRESH PATH ----
+bond_style      class2
+angle_style     class2
+dihedral_style  class2
+improper_style  class2
+special_bonds   lj/coul 0 0 1
+
+pair_style      lj/class2/coul/long 12.0
+pair_modify     mix sixthpower
+
+# The extra/... keywords enable extra B/A/D/I due to topology changes caused by reactions
+read_data       ${datafile} &
+                extra/special/per/atom 20 &
+                extra/bond/per/atom 10 &
+                extra/angle/per/atom 20 &
+                extra/dihedral/per/atom 50 &
+                extra/improper/per/atom 20
+
+velocity        all create ${ptemp} ${vseed} dist gaussian # create some velocities (fresh only)
+jump SELF after_read
+
+# ---- RESUME PATH ----
+label do_resume
+read_restart    ${rfile}
+
+label after_read
+
+#------------Neighbor / comm / kspace settings (both paths; NOT stored in restart)------------
+# read_restart restores pair_style+coeffs but NOT kspace_style, so set it here
+# for both fresh and resume paths.
+kspace_style    pppm 1.0e-4
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes one 5000 page 100000
+
+# Default comm_modify cutoff (pair 12.0 + skin 2.0 = 14 A) is smaller than the
+# bond/react reaction-template molecules' bounding-box diagonal (~26-27 A for
+# pre/post_reaction lmpmol files), causing "Fix bond/react needs ghost atoms
+# from further away" / "Bond(Dihedral) atoms ... missing" crashes mid-run.
+# comm settings are not saved in restart files, so they must be re-issued here.
+comm_modify     cutoff 28.0
+
+
+#------------Read rxn templates (both paths)------------
+molecule        mol1  ${molecule1}
+molecule        mol2  ${molecule2}
+
+dump            mydump_u all custom ${dumpstep} ${myid}.unwrapped.lammpstrj id mol type xu yu zu
+
+#------------bond/react execution (both paths; fix state restored on resume)------------
+fix      		myrxn all bond/react stabilization yes statted_grp .03 reset_mol_ids no &
+                react rxn1  all ${nevery} 0.5 ${Rmax} mol1  mol2  ${rxn_map1} prob ${Rprob} ${pseed} stabilize_steps 500
+
+fix             1 statted_grp_REACT nvt temp ${ptemp} ${ptemp} 100
+fix             2 bond_react_MASTER_group temp/rescale 1 ${ptemp} ${ptemp} 10 1
+
+
+#------------Calculate rxns------------
+# You may use the rxnN variables to calculate crosslink
+# density and then log in thermo_style custom below
+variable        rxn1 equal f_myrxn[1]
+
+
+#------------Thermosettings------------
+thermo          ${thermostep}
+thermo_style    custom step temp press vol density ke pe etotal evdwl ecoul epair &
+                ebond eangle edihed eimp pxx pyy pzz pxy pxz pyz v_rxn1
+
+#------------Rotating restart (crash / SLURM time-limit recovery)------------
+restart         ${restartstep} ${myid}.restart.a ${myid}.restart.b
+
+#------------Run (upto: runs TO total_steps for both fresh start and resume)------------
+run             ${total_steps} upto
